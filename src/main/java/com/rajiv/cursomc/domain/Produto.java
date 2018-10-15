@@ -15,7 +15,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -27,8 +26,8 @@ public class Produto implements Serializable {
 	private Integer id;
 	private String nome;
 	private Double preco;
-	
-	@JsonBackReference
+
+	@JsonIgnore
 	@ManyToMany
 	@JoinTable(
 		name = "PRODUTO_CATEGORIA",
