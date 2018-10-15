@@ -9,8 +9,6 @@ import com.rajiv.cursomc.domain.Categoria;
 import com.rajiv.cursomc.repositories.CategoriaRepository;
 import com.rajiv.cursomc.services.exception.ObjectNotFoundException;
 
-
-
 @Service
 public class CategoriaService {
 
