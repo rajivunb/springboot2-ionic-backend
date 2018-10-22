@@ -75,8 +75,18 @@ public class CursomcApplication implements CommandLineRunner {
 		prodImpressora.getCategorias().addAll(Arrays.asList(catInformatica, catEscritorio));
 		prodMouse.getCategorias().addAll(Arrays.asList(catInformatica));
 		
-		categoriaRepository.saveAll(Arrays.asList(catInformatica, catEscritorio));
+		// Adicionando mais categorias pra testar paginação
+		Categoria cat3 = new Categoria(null, "Cat3");
+		Categoria cat4 = new Categoria(null, "Cat4");
+		Categoria cat5 = new Categoria(null, "Cat5");
+		Categoria cat6 = new Categoria(null, "Cat6");
+		Categoria cat7 = new Categoria(null, "Cat7");
+		Categoria cat8 = new Categoria(null, "Cat8");
+				
+		categoriaRepository.saveAll(Arrays.asList(catInformatica, catEscritorio, cat3, cat4, cat5, cat6, cat7, cat8));
 		produtoRepository.saveAll(Arrays.asList(prodComputador, prodImpressora, prodMouse));
+		
+		
 		
 		// Cidade e Estado
 		Estado estadoSP = new Estado(null, "São Paulo");
